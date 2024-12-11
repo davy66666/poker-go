@@ -1,8 +1,8 @@
 package module
 
 import (
+	"github.com/davy66666/poker-go/src/github.com/dolotech/lib/utils"
 	"sync"
-	"github.com/dolotech/lib/utils"
 )
 
 type Module interface {

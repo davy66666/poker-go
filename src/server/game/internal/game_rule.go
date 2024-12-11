@@ -1,12 +1,12 @@
 package internal
 
 import (
-	"github.com/golang/glog"
-	"server/protocol"
-	"server/model"
-	"server/algorithm"
+	"github.com/davy66666/poker-go/src/github.com/dolotech/lib/utils"
+	"github.com/davy66666/poker-go/src/github.com/golang/glog"
+	"github.com/davy66666/poker-go/src/server/algorithm"
+	"github.com/davy66666/poker-go/src/server/model"
+	"github.com/davy66666/poker-go/src/server/protocol"
 	"time"
-	"github.com/dolotech/lib/utils"
 )
 
 func (r *Room) startDelay(startDelay *startDelay, o *Occupant) {
@@ -43,7 +43,7 @@ func (r *Room) start() {
 			return true
 		}
 		o.SetGameing()
-		n ++
+		n++
 		return true
 	})
 

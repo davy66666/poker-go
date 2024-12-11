@@ -3,12 +3,12 @@ package utils
 import (
 	"runtime"
 
-	"github.com/davecgh/go-spew/spew"
-	"github.com/golang/glog"
+	"github.com/davy66666/poker-go/src/github.com/davecgh/go-spew/spew"
+	"github.com/davy66666/poker-go/src/github.com/golang/glog"
 )
 
 // 产生panic时的调用栈打印
-func PrintPanicStack(extras ...interface{}) interface{}{
+func PrintPanicStack(extras ...interface{}) interface{} {
 	if x := recover(); x != nil {
 		glog.Errorln(x)
 		i := 0

@@ -1,11 +1,11 @@
 package module
 
 import (
-	"github.com/dolotech/leaf/chanrpc"
-	"github.com/dolotech/leaf/timer"
-	"time"
-	"github.com/dolotech/lib/grpool"
+	"github.com/davy66666/poker-go/src/github.com/dolotech/leaf/chanrpc"
+	"github.com/davy66666/poker-go/src/github.com/dolotech/leaf/timer"
+	"github.com/davy66666/poker-go/src/github.com/dolotech/lib/grpool"
 	"runtime"
+	"time"
 )
 
 type Skeleton struct {
@@ -64,7 +64,7 @@ func (s *Skeleton) Run(closeSig chan bool) {
 		case ci := <-s.commandServer.ChanCall:
 			s.commandServer.Exec(ci)
 			/*case cb := <-s.g.ChanCb:
-				s.g.Cb(cb)*/
+			s.g.Cb(cb)*/
 		case t := <-s.dispatcher.ChanTimer:
 			t.Cb()
 		}

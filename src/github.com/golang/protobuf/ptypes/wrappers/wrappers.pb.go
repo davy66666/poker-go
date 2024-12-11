@@ -20,7 +20,7 @@ It has these top-level messages:
 */
 package wrappers
 
-import proto "github.com/golang/protobuf/proto"
+import proto "github.com/davy66666/poker-go/src/github.com/golang/protobuf/proto"
 import fmt "fmt"
 import math "math"
 

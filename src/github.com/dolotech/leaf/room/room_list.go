@@ -1,12 +1,12 @@
 package room
 
 import (
+	"github.com/davy66666/poker-go/src/github.com/dolotech/leaf/gate"
+	"github.com/davy66666/poker-go/src/server/protocol"
+	"math/rand"
+	"strconv"
 	"sync"
 	"time"
-	"strconv"
-	"math/rand"
-	"server/protocol"
-	"github.com/dolotech/leaf/gate"
 )
 
 func OnMessage(m interface{}, a gate.Agent) {
@@ -102,7 +102,7 @@ func GetRooms() []IRoom {
 	var n = 0
 	for _, v := range rooms.M {
 		r[n] = v
-		n ++
+		n++
 	}
 
 	rooms.RUnlock()

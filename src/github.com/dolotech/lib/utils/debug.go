@@ -9,9 +9,9 @@ package utils
 
 import (
 	"fmt"
+	"github.com/davy66666/poker-go/src/github.com/golang/glog"
 	"reflect"
 	"strconv"
-	"github.com/golang/glog"
 )
 
 type variable struct {

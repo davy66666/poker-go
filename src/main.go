@@ -2,15 +2,15 @@ package main
 
 import (
 	"flag"
-	"github.com/golang/glog"
+	"github.com/davy66666/poker-go/src/github.com/dolotech/leaf"
+	"github.com/davy66666/poker-go/src/github.com/dolotech/lib/db"
+	"github.com/davy66666/poker-go/src/github.com/golang/glog"
+	"github.com/davy66666/poker-go/src/server/conf"
+	"github.com/davy66666/poker-go/src/server/game"
+	"github.com/davy66666/poker-go/src/server/gate"
+	"github.com/davy66666/poker-go/src/server/login"
+	"github.com/davy66666/poker-go/src/server/model"
 	"net/http"
-	"poker-em/server/conf"
-	"poker-em/src/github.com/dolotech/leaf"
-	`poker-em/src/github.com/dolotech/lib/db`
-	"server/game"
-	"server/gate"
-	"server/login"
-	"server/model"
 )
 
 var Commit = ""

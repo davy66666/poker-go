@@ -1,7 +1,7 @@
 package login
 
 import (
-	"server/login/internal"
+	"github.com/davy66666/poker-go/src/server/login/internal"
 )
 
 var (

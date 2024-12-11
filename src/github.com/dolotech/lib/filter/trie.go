@@ -8,9 +8,9 @@ package filter
 import (
 	"container/list"
 	"fmt"
+	"github.com/davy66666/poker-go/src/github.com/golang/glog"
 	"sort"
 	"unicode/utf8"
-	"github.com/golang/glog"
 )
 
 // In a trie, each node has many child nodes

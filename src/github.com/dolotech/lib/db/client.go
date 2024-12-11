@@ -7,8 +7,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/go-xorm/xorm"
-	_ "github.com/lib/pq"
+	"github.com/davy66666/poker-go/src/github.com/go-xorm/xorm"
+	_ "github.com/davy66666/poker-go/src/github.com/lib/pq"
 )
 
 // Client 数据库客户端
@@ -21,7 +21,7 @@ var db *Client
 //var database_addr string
 //const configFilePath string = "config.ini"
 
-func Init(url string) error{
+func Init(url string) error {
 	var err error
 	if db == nil {
 		db, err = NewClient("postgres", url)

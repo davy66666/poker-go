@@ -1,8 +1,8 @@
 package protocol
 
 import (
-	//"github.com/dolotech/leaf/network/protobuf"
-	"github.com/dolotech/leaf/network/json"
+	//"github.com/davy66666/poker-go/src/github.com/dolotech/leaf/network/protobuf"
+	"github.com/davy66666/poker-go/src/github.com/dolotech/leaf/network/json"
 )
 
 var Processor = json.NewProcessor()
@@ -73,13 +73,13 @@ type Hello struct {
 	Name string
 }
 
-//登录
+// 登录
 type UserLoginInfo struct {
 	UnionId  string
 	Nickname string
 }
 
-//登录
+// 登录
 type UserLoginInfoResp struct {
 	UnionId  string
 	Uid      uint32 // 用户id
@@ -150,7 +150,7 @@ type JoinRoomResp struct {
 	RoomInfo  *RoomInfo
 }
 
-//底牌
+// 底牌
 type PreFlop struct {
 	Cards []byte
 	Kind  uint8
@@ -168,24 +168,24 @@ type Turn struct {
 	Kind uint8
 }
 
-//河牌
+// 河牌
 type River struct {
 	Card byte
 	Kind uint8
 }
 
-//通报本局庄家
+// 通报本局庄家
 type Button struct {
 	Uid uint32
 }
 
 // 玩家提交下注数据
 // 有四种下注方式，下注数分别对应为：
-//弃牌: <0 (fold)
-//跟注：等于单注额 (call)
-//看注：= 0 表示看注 (check)
-//加注：大于单注额 (raise)
-//全押：等于玩家手中所有筹码 (allin)
+// 弃牌: <0 (fold)
+// 跟注：等于单注额 (call)
+// 看注：= 0 表示看注 (check)
+// 加注：大于单注额 (raise)
+// 全押：等于玩家手中所有筹码 (allin)
 type Bet struct {
 	Value int32
 }
@@ -207,12 +207,12 @@ type BetResp struct {
 	Uid   uint32
 }
 
-//通报奖池
+// 通报奖池
 type Pot struct {
 	Pot []uint32
 }
 
-//摊牌和比牌
+// 摊牌和比牌
 type Showdown struct {
 	Showdown []*ShowdownItem
 }

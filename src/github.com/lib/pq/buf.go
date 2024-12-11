@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"encoding/binary"
 
-	"github.com/lib/pq/oid"
+	"github.com/davy66666/poker-go/src/github.com/lib/pq/oid"
 )
 
 type readBuf []byte

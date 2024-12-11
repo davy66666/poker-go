@@ -7,7 +7,7 @@ using this package directly. For example:
 	import (
 		"database/sql"
 
-		_ "github.com/lib/pq"
+		_ "github.com/davy66666/poker-go/src/github.com/lib/pq"
 	)
 
 	func main() {
@@ -25,9 +25,7 @@ You can also connect to a database using a URL. For example:
 
 	db, err := sql.Open("postgres", "postgres://pqgotest:password@localhost/pqgotest?sslmode=verify-full")
 
-
-Connection String Parameters
-
+# Connection String Parameters
 
 Similarly to libpq, when establishing a connection using pq you are expected to
 supply a connection string containing zero or more parameters.
@@ -40,35 +38,35 @@ them in the options parameter.
 For compatibility with libpq, the following special connection parameters are
 supported:
 
-	* dbname - The name of the database to connect to
-	* user - The user to sign in as
-	* password - The user's password
-	* host - The host to connect to. Values that start with / are for unix domain sockets. (default is localhost)
-	* port - The port to bind to. (default is 5432)
-	* sslmode - Whether or not to use SSL (default is require, this is not the default for libpq)
-	* fallback_application_name - An application_name to fall back to if one isn't provided.
-	* connect_timeout - Maximum wait for connection, in seconds. Zero or not specified means wait indefinitely.
-	* sslcert - Cert file location. The file must contain PEM encoded data.
-	* sslkey - Key file location. The file must contain PEM encoded data.
-	* sslrootcert - The location of the root certificate file. The file must contain PEM encoded data.
+  - dbname - The name of the database to connect to
+  - user - The user to sign in as
+  - password - The user's password
+  - host - The host to connect to. Values that start with / are for unix domain sockets. (default is localhost)
+  - port - The port to bind to. (default is 5432)
+  - sslmode - Whether or not to use SSL (default is require, this is not the default for libpq)
+  - fallback_application_name - An application_name to fall back to if one isn't provided.
+  - connect_timeout - Maximum wait for connection, in seconds. Zero or not specified means wait indefinitely.
+  - sslcert - Cert file location. The file must contain PEM encoded data.
+  - sslkey - Key file location. The file must contain PEM encoded data.
+  - sslrootcert - The location of the root certificate file. The file must contain PEM encoded data.
 
 Valid values for sslmode are:
 
-	* disable - No SSL
-	* require - Always SSL (skip verification)
-	* verify-ca - Always SSL (verify that the certificate presented by the server was signed by a trusted CA)
-	* verify-full - Always SSL (verify that the certification presented by the server was signed by a trusted CA and the server host name matches the one in the certificate)
+  - disable - No SSL
+  - require - Always SSL (skip verification)
+  - verify-ca - Always SSL (verify that the certificate presented by the server was signed by a trusted CA)
+  - verify-full - Always SSL (verify that the certification presented by the server was signed by a trusted CA and the server host name matches the one in the certificate)
 
 See http://www.postgresql.org/docs/current/static/libpq-connect.html#LIBPQ-CONNSTRING
 for more information about connection string parameters.
 
 Use single quotes for values that contain whitespace:
 
-    "user=pqgotest password='with spaces'"
+	"user=pqgotest password='with spaces'"
 
 A backslash will escape the next character in values:
 
-    "user=space\ man password='it\'s valid'
+	"user=space\ man password='it\'s valid'
 
 Note that the connection parameter client_encoding (which sets the
 text encoding for the connection) may be set but must be "UTF8",
@@ -86,8 +84,7 @@ variables not supported by pq are set, pq will panic during connection
 establishment.  Environment variables have a lower precedence than explicitly
 provided connection parameters.
 
-
-Queries
+# Queries
 
 database/sql does not dictate any specific format for parameter
 markers in query strings, and pq uses the Postgres-native ordinal markers,
@@ -112,18 +109,17 @@ For more details on RETURNING, see the Postgres documentation:
 
 For additional instructions on querying see the documentation for the database/sql package.
 
-Errors
+# Errors
 
 pq may return errors of type *pq.Error which can be interrogated for error details:
 
-        if err, ok := err.(*pq.Error); ok {
-            fmt.Println("pq error:", err.Code.Name())
-        }
+	if err, ok := err.(*pq.Error); ok {
+	    fmt.Println("pq error:", err.Code.Name())
+	}
 
 See the pq.Error type for details.
 
-
-Bulk imports
+# Bulk imports
 
 You can perform bulk imports by preparing a statement returned by pq.CopyIn (or
 pq.CopyInSchema) in an explicit transaction (sql.Tx). The returned statement
@@ -171,9 +167,7 @@ Usage example:
 		log.Fatal(err)
 	}
 
-
-Notifications
-
+# Notifications
 
 PostgreSQL supports a simple publish/subscribe model over database
 connections.  See http://www.postgresql.org/docs/current/static/sql-notify.html
@@ -204,7 +198,6 @@ for more information).  Note that the channel name will be truncated to 63
 bytes by the PostgreSQL server.
 
 You can find a complete, working example of Listener usage at
-http://godoc.org/github.com/lib/pq/listen_example.
-
+http://godoc.org/github.com/davy66666/poker-go/src/github.com/lib/pq/listen_example.
 */
 package pq

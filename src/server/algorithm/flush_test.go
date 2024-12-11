@@ -1,9 +1,9 @@
 package algorithm
 
 import (
-	"testing"
+	"github.com/davy66666/poker-go/src/github.com/stretchr/testify/assert"
 	"strings"
-	"github.com/stretchr/testify/assert"
+	"testing"
 )
 
 func TestFlush1(t *testing.T) {

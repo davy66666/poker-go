@@ -1,7 +1,7 @@
 // Go support for Protocol Buffers - Google's data interchange format
 //
 // Copyright 2010 The Go Authors.  All rights reserved.
-// https://github.com/golang/protobuf
+// https://github.com/davy66666/poker-go/src/github.com/golang/protobuf
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -37,7 +37,7 @@ import (
 	"testing"
 
 	mytestpb "./my_test"
-	multipb "github.com/golang/protobuf/protoc-gen-go/testdata/multi"
+	multipb "github.com/davy66666/poker-go/src/github.com/golang/protobuf/protoc-gen-go/testdata/multi"
 )
 
 func TestLink(t *testing.T) {

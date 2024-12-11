@@ -3,7 +3,7 @@ package bytes
 import (
 	"testing"
 
-	"github.com/stretchr/testify/assert"
+	"github.com/davy66666/poker-go/src/github.com/stretchr/testify/assert"
 )
 
 func TestBytesFormat(t *testing.T) {

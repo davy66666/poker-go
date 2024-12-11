@@ -1,13 +1,13 @@
 package internal
 
 import (
+	"github.com/davy66666/poker-go/src/github.com/dolotech/leaf/gate"
+	"github.com/davy66666/poker-go/src/github.com/dolotech/leaf/room"
+	"github.com/davy66666/poker-go/src/github.com/golang/glog"
+	"github.com/davy66666/poker-go/src/server/game"
+	"github.com/davy66666/poker-go/src/server/model"
+	"github.com/davy66666/poker-go/src/server/protocol"
 	"reflect"
-	"server/protocol"
-	"github.com/dolotech/leaf/gate"
-	"server/game"
-	"github.com/golang/glog"
-	"server/model"
-	"github.com/dolotech/leaf/room"
 )
 
 func init() {

@@ -1,8 +1,8 @@
 package leaf
 
 import (
-	"github.com/golang/glog"
-	"github.com/dolotech/leaf/module"
+	"github.com/davy66666/poker-go/src/github.com/dolotech/leaf/module"
+	"github.com/davy66666/poker-go/src/github.com/golang/glog"
 	"os"
 	"os/signal"
 )

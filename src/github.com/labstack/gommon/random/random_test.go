@@ -3,7 +3,7 @@ package random
 import (
 	"testing"
 
-	"github.com/stretchr/testify/assert"
+	"github.com/davy66666/poker-go/src/github.com/stretchr/testify/assert"
 )
 
 func Test(t *testing.T) {

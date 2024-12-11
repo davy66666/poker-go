@@ -4,9 +4,9 @@ import (
 	"encoding/binary"
 	"errors"
 	"fmt"
-	"github.com/golang/protobuf/proto"
-	"github.com/dolotech/leaf/chanrpc"
-	"github.com/golang/glog"
+	"github.com/davy66666/poker-go/src/github.com/dolotech/leaf/chanrpc"
+	"github.com/davy66666/poker-go/src/github.com/golang/glog"
+	"github.com/davy66666/poker-go/src/github.com/golang/protobuf/proto"
 	"math"
 	"reflect"
 )
@@ -68,7 +68,7 @@ func (p *Processor) Register(msg interface{}) uint16 {
 }
 
 // It's dangerous to call the method on routing or marshaling (unmarshaling)
-func (p *Processor) SetRouter(msg  interface{}, msgRouter *chanrpc.Server) {
+func (p *Processor) SetRouter(msg interface{}, msgRouter *chanrpc.Server) {
 	msgType := reflect.TypeOf(msg)
 	id, ok := p.msgID[msgType]
 	if !ok {
@@ -79,13 +79,13 @@ func (p *Processor) SetRouter(msg  interface{}, msgRouter *chanrpc.Server) {
 }
 
 // It's dangerous to call the method on routing or marshaling (unmarshaling)
-func (p *Processor) SetHandler(msg , msgHandler interface{}) {
+func (p *Processor) SetHandler(msg, msgHandler interface{}) {
 	msgType := reflect.TypeOf(msg)
 	id, ok := p.msgID[msgType]
 	if !ok {
 		glog.Fatal("message %s not registered", msgType)
 	}
-	v:=reflect.ValueOf(msgHandler)
+	v := reflect.ValueOf(msgHandler)
 	p.msgInfo[id].msgHandler = &v
 }
 
@@ -99,7 +99,7 @@ func (p *Processor) SetRawHandler(id uint16, msgRawHandler MsgHandler) {
 }
 
 // goroutine safe
-func (p *Processor) Route(msg , userData interface{}) error {
+func (p *Processor) Route(msg, userData interface{}) error {
 	// raw
 	if msgRaw, ok := msg.(MsgRaw); ok {
 		if msgRaw.msgID >= uint16(len(p.msgInfo)) {

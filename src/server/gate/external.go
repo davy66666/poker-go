@@ -1,7 +1,7 @@
 package gate
 
 import (
-	"server/gate/internal"
+	"github.com/davy66666/poker-go/src/server/gate/internal"
 )
 
 var (

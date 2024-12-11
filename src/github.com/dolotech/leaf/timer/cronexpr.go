@@ -1,6 +1,6 @@
 package timer
 
-// reference: https://github.com/robfig/cron
+// reference: https://github.com/davy66666/poker-go/src/github.com/robfig/cron
 import (
 	"fmt"
 	"math"

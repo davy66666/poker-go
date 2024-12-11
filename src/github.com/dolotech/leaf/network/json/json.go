@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/dolotech/leaf/chanrpc"
-	"github.com/golang/glog"
+	"github.com/davy66666/poker-go/src/github.com/dolotech/leaf/chanrpc"
+	"github.com/davy66666/poker-go/src/github.com/golang/glog"
 	"reflect"
 )
 
@@ -80,7 +80,7 @@ func (p *Processor) SetHandler(msg interface{}, msgHandler interface{}) {
 		glog.Fatal("message %v not registered", msgID)
 	}
 
-	v:=reflect.ValueOf(msgHandler)
+	v := reflect.ValueOf(msgHandler)
 	i.msgHandler = &v
 }
 
@@ -131,8 +131,8 @@ func (p *Processor) Route(msg, userData interface{}) error {
 
 // goroutine safe
 func (p *Processor) Unmarshal(data []byte) (interface{}, error) {
-	 if len(data) == 0 {
-		 return nil, errors.New("json data len == 0")
+	if len(data) == 0 {
+		return nil, errors.New("json data len == 0")
 	}
 
 	var m map[string]json.RawMessage

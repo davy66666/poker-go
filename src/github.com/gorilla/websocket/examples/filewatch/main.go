@@ -14,7 +14,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/gorilla/websocket"
+	"github.com/davy66666/poker-go/src/github.com/gorilla/websocket"
 )
 
 const (

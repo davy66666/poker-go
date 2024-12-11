@@ -1,8 +1,8 @@
 package timer
 
 import (
-	"github.com/dolotech/leaf/conf"
-	"github.com/golang/glog"
+	"github.com/davy66666/poker-go/src/github.com/dolotech/leaf/conf"
+	"github.com/davy66666/poker-go/src/github.com/golang/glog"
 	"runtime"
 	"time"
 )

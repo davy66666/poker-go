@@ -1,8 +1,8 @@
 package internal
 
 import (
-	"github.com/dolotech/leaf/module"
-	"server/base"
+	"github.com/davy66666/poker-go/src/github.com/dolotech/leaf/module"
+	"github.com/davy66666/poker-go/src/server/base"
 )
 
 var (

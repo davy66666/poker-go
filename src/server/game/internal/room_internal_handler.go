@@ -1,11 +1,11 @@
 package internal
 
 import (
-	"server/protocol"
-	"github.com/golang/glog"
-	"github.com/davecgh/go-spew/spew"
+	"github.com/davy66666/poker-go/src/github.com/davecgh/go-spew/spew"
+	"github.com/davy66666/poker-go/src/github.com/dolotech/lib/utils"
+	"github.com/davy66666/poker-go/src/github.com/golang/glog"
+	"github.com/davy66666/poker-go/src/server/protocol"
 	"time"
-	"github.com/dolotech/lib/utils"
 )
 
 func (r *Room) joinRoom(m *protocol.JoinRoom, o *Occupant) {
@@ -69,10 +69,9 @@ func (r *Room) joinRoom(m *protocol.JoinRoom, o *Occupant) {
 
 	o.WriteMsg(&protocol.JoinRoomResp{UserInfos: userinfos, RoomInfo: rinfo})
 
-
 	time.AfterFunc(time.Second*2, func() {
 		defer utils.PrintPanicStack()
-		r.Send(o,&startDelay{})
+		r.Send(o, &startDelay{})
 	})
 	r.Debug("joinRoom", spew.Sdump(m))
 }

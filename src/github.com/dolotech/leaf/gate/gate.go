@@ -1,9 +1,9 @@
 package gate
 
 import (
-	"github.com/dolotech/leaf/chanrpc"
-	"github.com/golang/glog"
-	"github.com/dolotech/leaf/network"
+	"github.com/davy66666/poker-go/src/github.com/dolotech/leaf/chanrpc"
+	"github.com/davy66666/poker-go/src/github.com/dolotech/leaf/network"
+	"github.com/davy66666/poker-go/src/github.com/golang/glog"
 	"net"
 	"reflect"
 	"time"

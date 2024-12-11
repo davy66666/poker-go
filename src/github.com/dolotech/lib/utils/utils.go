@@ -14,7 +14,7 @@ import (
 	"encoding/gob"
 	"encoding/hex"
 	"fmt"
-	"github.com/golang/glog"
+	"github.com/davy66666/poker-go/src/github.com/golang/glog"
 	"math"
 	"math/rand"
 	"net"
@@ -164,7 +164,7 @@ func SubStr(str string, begin, length int) (substr string) {
 	return string(rs[begin:end])
 }
 
-//整形转换成字节
+// 整形转换成字节
 func IntToBytes(n int) []byte {
 	x := int32(n)
 	bytesBuffer := bytes.NewBuffer([]byte{})
@@ -172,7 +172,7 @@ func IntToBytes(n int) []byte {
 	return bytesBuffer.Bytes()
 }
 
-//字节转换成整形
+// 字节转换成整形
 func BytesToInt(b []byte) int {
 	bytesBuffer := bytes.NewBuffer(b)
 	var x int32
@@ -180,7 +180,7 @@ func BytesToInt(b []byte) int {
 	return int(x)
 }
 
-//整形转换成字节
+// 整形转换成字节
 func Int64ToBytes(n int64) []byte {
 	x := int64(n)
 	bytesBuffer := bytes.NewBuffer([]byte{})
@@ -188,7 +188,7 @@ func Int64ToBytes(n int64) []byte {
 	return bytesBuffer.Bytes()
 }
 
-//字节转换成整形
+// 字节转换成整形
 func BytesToInt64(b []byte) int64 {
 	bytesBuffer := bytes.NewBuffer(b)
 	var x int64
@@ -196,7 +196,7 @@ func BytesToInt64(b []byte) int64 {
 	return int64(x)
 }
 
-//切片中字符串第一个位置
+// 切片中字符串第一个位置
 func SliceIndexOf(arr []string, str string) int {
 	var index int = -1
 	arrlen := len(arr)
@@ -209,7 +209,7 @@ func SliceIndexOf(arr []string, str string) int {
 	return index
 }
 
-//字节转换成整形
+// 字节转换成整形
 func SliceLastIndexOf(arr []string, str string) int {
 	var index int = -1
 	for arrlen := len(arr) - 1; arrlen > -1; arrlen-- {
@@ -221,7 +221,7 @@ func SliceLastIndexOf(arr []string, str string) int {
 	return index
 }
 
-//字节转换成整形
+// 字节转换成整形
 func SliceRemoveFormSlice(oriArr []string, removeArr []string) []string {
 	endArr := oriArr[:]
 	for _, value := range removeArr {
@@ -313,7 +313,6 @@ func Encode(data interface{}) ([]byte, error) {
 }
 
 // 用gob进行数据解码
-//
 func Decode(data []byte, to interface{}) error {
 	buf := bytes.NewBuffer(data)
 	dec := gob.NewDecoder(buf)
@@ -329,7 +328,7 @@ func Clone(dst, src interface{}) error {
 	return gob.NewDecoder(bytes.NewBuffer(buf.Bytes())).Decode(dst)
 }
 
-//----------------------一下几个函数只对数字字符串有效----------------------------
+// ----------------------一下几个函数只对数字字符串有效----------------------------
 func IsNumString(str string) bool {
 	runeArr := []rune(str)
 	for i := 0; i < len(runeArr); i++ {
@@ -397,7 +396,7 @@ func StringAdd(numStr string) string {
 	return string(runeArr)
 }
 
-//-----------------------------------------------------------------
+// -----------------------------------------------------------------
 const FORMAT string = "2006-01-02 15:04:05"
 const FORMATDATA string = "2006-01-02 "
 
@@ -510,11 +509,12 @@ func MonthDays(year int, month int) (days int) {
 }
 
 // md5 加密
-// func Md5(text string) string {
-// 	hashMd5 := md5.New()
-// 	io.WriteString(hashMd5, text)
-// 	return fmt.Sprintf("%x", hashMd5.Sum(nil))
-// }
+//
+//	func Md5(text string) string {
+//		hashMd5 := md5.New()
+//		io.WriteString(hashMd5, text)
+//		return fmt.Sprintf("%x", hashMd5.Sum(nil))
+//	}
 func Md5(text string) string {
 	h := md5.New()
 	h.Write([]byte(text))                 //

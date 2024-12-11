@@ -1,24 +1,24 @@
 package algorithm
 
 import (
-	"testing"
+	"github.com/davy66666/poker-go/src/github.com/stretchr/testify/assert"
 	"strings"
-	"github.com/stretchr/testify/assert"
+	"testing"
 )
 
 func TestFour(t *testing.T) {
 	cards := Cards{0x12, 0x02, 0x22, 0xb, 0x1b, 0x7, 0x32}
-	k,_:=De(cards.GetType())
+	k, _ := De(cards.GetType())
 	assert.Equal(t, k, FOUR)
 
 	cards = Cards{0x12, 0x02, 0x22, 0x32}
-	k,_=De(cards.GetType())
+	k, _ = De(cards.GetType())
 	assert.Equal(t, k, FOUR)
 }
 
 func TestThree(t *testing.T) {
 	cards := Cards{0x12, 0x02, 0x22, 0x3a, 0x2a, 0x1a, 0x33}
-	k,_:=De(cards.GetType())
+	k, _ := De(cards.GetType())
 	assert.Equal(t, k, FULL_HOUSE)
 
 }
@@ -55,7 +55,6 @@ func TestCards_Straight(t *testing.T) {
 	assert.Equal(t, k, STRAIGHT)
 	assert.Equal(t, v, uint32(0x5))
 
-
 	cards = Cards{0x12, 0x03, 0x2a, 0x3c, 0x2b, 0x1d, 0x3E}
 	k, v = De(cards.GetType())
 	assert.Equal(t, k, STRAIGHT)
@@ -67,7 +66,7 @@ func TestCards_Flush(t *testing.T) {
 	cards := Cards{0x32, 0x33, 0x34, 0x35, 0x26, 0x37, 0x28}
 
 	k, _ := De(cards.GetType())
-	assert.Equal(t, k,FLUSH)
+	assert.Equal(t, k, FLUSH)
 	//assert.Equal(t, v, uint32(6))
 }
 
@@ -90,37 +89,35 @@ func TestCards_RoyalFlush(t *testing.T) {
 	assert.Equal(t, k, FLUSH)
 }
 
-
 func TestCards_FLUSH1(t *testing.T) {
 	cards1 := Cards{0x22, 0x22, 0x22, 0x25, 0x38, 0x28}
 	cards2 := Cards{0x32, 0x32, 0x33, 0x34, 0x25, 0x36}
-	v1:=cards1.GetType()
-	v2:=cards2.GetType()
+	v1 := cards1.GetType()
+	v2 := cards2.GetType()
 
-	assert.Equal(t,v1 > v2 ,true)
-
+	assert.Equal(t, v1 > v2, true)
 
 	cards1 = Cards{0x22, 0x22, 0x2E, 0x25, 0x38, 0x28}
 	cards2 = Cards{0x32, 0x32, 0x33, 0x3a, 0x2a, 0x3E}
-	assert.Equal(t,cards1.GetType() > cards2.GetType() ,false)
+	assert.Equal(t, cards1.GetType() > cards2.GetType(), false)
 }
 
 func TestCards_FLUSH(t *testing.T) {
 	cards1 := Cards{0x22, 0x22, 0x24, 0x25, 0x38, 0x28}
 	cards2 := Cards{0x32, 0x32, 0x33, 0x34, 0x25, 0x36}
-	v1:=cards1.GetType()
-	v2:=cards2.GetType()
+	v1 := cards1.GetType()
+	v2 := cards2.GetType()
 
-	assert.Equal(t,v1 > v2 ,true)
+	assert.Equal(t, v1 > v2, true)
 }
 
 func TestCards_PK(t *testing.T) {
 
 	cards1 := Cards{0x32, 0x32, 0x34, 0x35, 0x25, 0x38, 0x28}
 	cards2 := Cards{0x32, 0x32, 0x33, 0x34, 0x25, 0x36}
-	v1:=cards1.GetType()
-	v2:=cards2.GetType()
-	assert.Equal(t,v1 > v2 ,true)
+	v1 := cards1.GetType()
+	v2 := cards2.GetType()
+	assert.Equal(t, v1 > v2, true)
 
 }
 func TestCards_StraightFlush(t *testing.T) {
@@ -204,12 +201,12 @@ func TestFullFouse(t *testing.T) {
 		//t.Log(cards.String())
 
 		k, value := De(cards.GetType())
-		if oldValue == 0{
+		if oldValue == 0 {
 			oldValue = value
 			continue
 		}
 
-		assert.Equal(t, oldValue> value, true)
+		assert.Equal(t, oldValue > value, true)
 
 		assert.Equal(t, k, FULL_HOUSE)
 		//assert.Equal(t,v,uint32(6))
@@ -221,31 +218,31 @@ func TestFullFouse(t *testing.T) {
 func Test_Straight1(t *testing.T) {
 
 	/*	testCards := "T J Q K A|" +
-		"9 T J Q K|" +
-		"8 9 T J Q|" +
-		"7 8 9 T J|" +
-		"6 7 8 9 T|" +
-		"5 6 7 8 9|" +
-		"4 5 6 7 8|" +
-		"3 4 5 6 7|" +
-		"2 3 4 5 6|" +
-		"A 2 3 4 5"
+				"9 T J Q K|" +
+				"8 9 T J Q|" +
+				"7 8 9 T J|" +
+				"6 7 8 9 T|" +
+				"5 6 7 8 9|" +
+				"4 5 6 7 8|" +
+				"3 4 5 6 7|" +
+				"2 3 4 5 6|" +
+				"A 2 3 4 5"
 
-	//array := strings.Split(testCards, "|")
-for _, v := range array {
-		cards := &Cards{}
-		cards.SetByString(v)
-		cards.Sort()
-		t.Log(cards.String(), cards.Straight() > 0)
-	}
-	t.Log("--------------------------------------")
+			//array := strings.Split(testCards, "|")
+		for _, v := range array {
+				cards := &Cards{}
+				cards.SetByString(v)
+				cards.Sort()
+				t.Log(cards.String(), cards.Straight() > 0)
+			}
+			t.Log("--------------------------------------")
 
-	for _, v := range array {
-		cards := &Cards{}
-		cards.SetByString(v)
-		cards.Sort()
-		t.Log(cards.String(), cards.StraightFlush() > 0)
-	}*/
+			for _, v := range array {
+				cards := &Cards{}
+				cards.SetByString(v)
+				cards.Sort()
+				t.Log(cards.String(), cards.StraightFlush() > 0)
+			}*/
 	/*	t.Log("--------------------------------------")
 
 		for _, v := range array {
@@ -295,7 +292,7 @@ func Test_turnToValue(t *testing.T) {
 	v := ToValue([]byte{0x3E, 0x3E, 0x3E, 0x3E, 0x3E, 0x3E, 0x3E})
 
 	//var v3 uint16 = v
-	v1 := v | ( 10 << 24)
+	v1 := v | (10 << 24)
 
 	//t.Log(v3)
 

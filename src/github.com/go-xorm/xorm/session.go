@@ -523,7 +523,7 @@ func (session *Session) exec(sqlStr string, args ...interface{}) (sql.Result, er
 
 	return session.Engine.logSQLExecutionTime(sqlStr, args, func() (sql.Result, error) {
 		if session.IsAutoCommit {
-			// FIXME: oci8 can not auto commit (github.com/mattn/go-oci8)
+			// FIXME: oci8 can not auto commit (github.com/davy66666/poker-go/src/github.com/mattn/go-oci8)
 			if session.Engine.dialect.DBType() == core.ORACLE {
 				session.Begin()
 				r, err := session.Tx.Exec(sqlStr, args...)
@@ -1246,7 +1246,7 @@ func (session *Session) Find(rowsSlicePtr interface{}, condiBean ...interface{})
 		session.Statement.BeanArgs = args
 	} else {
 		// !oinume! Add "<col> IS NULL" to WHERE whatever condiBean is given.
-		// See https://github.com/go-xorm/xorm/issues/179
+		// See https://github.com/davy66666/poker-go/src/github.com/go-xorm/xorm/issues/179
 		if col := table.DeletedColumn(); col != nil && !session.Statement.unscoped { // tag "deleted" is enabled
 			var colName = session.Engine.Quote(col.Name)
 			if addedTableName {

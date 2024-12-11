@@ -1,9 +1,9 @@
 package gate
 
 import (
-	"server/protocol"
-	"server/game"
-	"server/login"
+	"github.com/davy66666/poker-go/src/server/game"
+	"github.com/davy66666/poker-go/src/server/login"
+	"github.com/davy66666/poker-go/src/server/protocol"
 )
 
 func init() {

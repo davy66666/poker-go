@@ -2,6 +2,7 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
+//go:build ignore
 // +build ignore
 
 package main
@@ -14,7 +15,7 @@ import (
 	"os/signal"
 	"time"
 
-	"github.com/gorilla/websocket"
+	"github.com/davy66666/poker-go/src/github.com/gorilla/websocket"
 )
 
 var addr = flag.String("addr", "localhost:8080", "http service address")

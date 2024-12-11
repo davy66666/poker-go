@@ -1,7 +1,7 @@
 // Go support for Protocol Buffers - Google's data interchange format
 //
 // Copyright 2013 The Go Authors.  All rights reserved.
-// https://github.com/golang/protobuf
+// https://github.com/davy66666/poker-go/src/github.com/golang/protobuf
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -34,7 +34,7 @@ package generator
 import (
 	"testing"
 
-	"github.com/golang/protobuf/protoc-gen-go/descriptor"
+	"github.com/davy66666/poker-go/src/github.com/golang/protobuf/protoc-gen-go/descriptor"
 )
 
 func TestCamelCase(t *testing.T) {
@@ -65,8 +65,8 @@ func TestGoPackageOption(t *testing.T) {
 	}{
 		{"", "", "", false},
 		{"foo", "", "foo", true},
-		{"github.com/golang/bar", "github.com/golang/bar", "bar", true},
-		{"github.com/golang/bar;baz", "github.com/golang/bar", "baz", true},
+		{"github.com/davy66666/poker-go/src/github.com/golang/bar", "github.com/davy66666/poker-go/src/github.com/golang/bar", "bar", true},
+		{"github.com/davy66666/poker-go/src/github.com/golang/bar;baz", "github.com/davy66666/poker-go/src/github.com/golang/bar", "baz", true},
 	}
 	for _, tc := range tests {
 		d := &FileDescriptor{
@@ -86,8 +86,8 @@ func TestGoPackageOption(t *testing.T) {
 
 func TestUnescape(t *testing.T) {
 	tests := []struct {
-		in   string
-		out  string
+		in  string
+		out string
 	}{
 		// successful cases, including all kinds of escapes
 		{"", ""},

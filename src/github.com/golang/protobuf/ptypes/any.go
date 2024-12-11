@@ -1,7 +1,7 @@
 // Go support for Protocol Buffers - Google's data interchange format
 //
 // Copyright 2016 The Go Authors.  All rights reserved.
-// https://github.com/golang/protobuf
+// https://github.com/davy66666/poker-go/src/github.com/golang/protobuf
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -39,8 +39,8 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/golang/protobuf/proto"
-	"github.com/golang/protobuf/ptypes/any"
+	"github.com/davy66666/poker-go/src/github.com/golang/protobuf/proto"
+	"github.com/davy66666/poker-go/src/github.com/golang/protobuf/ptypes/any"
 )
 
 const googleApis = "type.googleapis.com/"
@@ -76,9 +76,9 @@ func MarshalAny(pb proto.Message) (*any.Any, error) {
 //
 // Example:
 //
-//   var x ptypes.DynamicAny
-//   if err := ptypes.UnmarshalAny(a, &x); err != nil { ... }
-//   fmt.Printf("unmarshaled message: %v", x.Message)
+//	var x ptypes.DynamicAny
+//	if err := ptypes.UnmarshalAny(a, &x); err != nil { ... }
+//	fmt.Printf("unmarshaled message: %v", x.Message)
 type DynamicAny struct {
 	proto.Message
 }

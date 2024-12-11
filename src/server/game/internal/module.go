@@ -1,13 +1,13 @@
 package internal
 
 import (
-	"github.com/dolotech/leaf/module"
-	"server/base"
-	"github.com/golang/glog"
-	"server/protocol"
-	"github.com/dolotech/leaf/room"
+	"github.com/davy66666/poker-go/src/github.com/dolotech/leaf/module"
+	"github.com/davy66666/poker-go/src/github.com/dolotech/leaf/room"
+	"github.com/davy66666/poker-go/src/github.com/golang/glog"
+	"github.com/davy66666/poker-go/src/server/base"
+	"github.com/davy66666/poker-go/src/server/model"
+	"github.com/davy66666/poker-go/src/server/protocol"
 	"reflect"
-	"server/model"
 )
 
 var (

@@ -1,3 +1,4 @@
+//go:build ignore
 // +build ignore
 
 // Generate the table of OID values
@@ -11,7 +12,7 @@ import (
 	"os"
 	"os/exec"
 
-	_ "github.com/lib/pq"
+	_ "github.com/davy66666/poker-go/src/github.com/lib/pq"
 )
 
 func main() {

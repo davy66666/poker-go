@@ -2,8 +2,8 @@ package db
 
 import (
 	//"game/player"
-	//"github.com/bmizerany/assert"
-	_ "github.com/lib/pq"
+	//"github.com/davy66666/poker-go/src/github.com/bmizerany/assert"
+	_ "github.com/davy66666/poker-go/src/github.com/lib/pq"
 	//l4g "lib/log4go"
 	"testing"
 )

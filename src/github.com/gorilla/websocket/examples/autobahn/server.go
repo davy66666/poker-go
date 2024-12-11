@@ -14,7 +14,7 @@ import (
 	"time"
 	"unicode/utf8"
 
-	"github.com/gorilla/websocket"
+	"github.com/davy66666/poker-go/src/github.com/gorilla/websocket"
 )
 
 var upgrader = websocket.Upgrader{

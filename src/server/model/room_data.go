@@ -1,8 +1,8 @@
 package model
 
 import (
+	"github.com/davy66666/poker-go/src/github.com/dolotech/lib/db"
 	"time"
-	"github.com/dolotech/lib/db"
 )
 
 //房间基本信息
@@ -29,7 +29,6 @@ func (u *Room) Insert() (int64, error) {
 func (this *Room) GetById() (bool, error) {
 	return db.C().Engine().Where("uid = ?", this.Rid).Get(this)
 }
-
 
 func (r *Room) CreatedTime() uint32 {
 	return uint32(r.CreatedAt.Unix())

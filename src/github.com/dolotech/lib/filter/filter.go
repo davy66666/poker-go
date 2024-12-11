@@ -3,13 +3,13 @@ package filter
 import (
 	"bytes"
 	_ "fmt"
+	"github.com/davy66666/poker-go/src/github.com/golang/glog"
 	"io/ioutil"
 	"os"
 	"os/signal"
 	"sort"
 	"syscall"
 	"time"
-	"github.com/golang/glog"
 )
 
 var dicFileTrie map[string]*Trie = make(map[string]*Trie) //map for dictionary file to trie
@@ -46,7 +46,7 @@ func buildDicFileTrie() { //when server start-up the trie will be built automati
 	}
 }
 
-//separator charactors,if we want to match "abcde" in "abc112312de" ,separator charactors can be set to "123"
+// separator charactors,if we want to match "abcde" in "abc112312de" ,separator charactors can be set to "123"
 type Seps []rune
 
 func (s Seps) Len() int {
@@ -69,60 +69,6 @@ func FilterText(dicFile string, text []rune, seps Seps, rep rune) {
 	T := dicFileTrie[dicFile] //save trie to temporary variable to eliminate concurrency problem
 
 	if T == nil { //no matched trie for dictionary file
-		return
-	}
-	sort.Sort(seps)        //sort seps to speed up search process
-	walkNode := T.RootNode //walk through the trie from root
-
-	var nextNode *Node //point to walkNode's next node
-	for i, charactor := range text { //travel the text,i is used as an index to present charactor
-		for {
-			if FindSepC(seps, charactor) { //omit charactor in seps
-				break
-			}
-			nextNode = walkNode.BinGetChildNodeByVal(charactor)
-			if nextNode == nil { //not found next node whose val is charactor
-				if nil != walkNode.SuffixNode { //point to suffix node, redo the find operation,maybe its suffix node is root
-					walkNode = walkNode.SuffixNode
-					continue
-				} else { //only root node's suffix node is null
-					walkNode = T.RootNode //restart from root
-					break                 //break to handle next charactor
-				}
-			} else { // find node
-				if nextNode.EOW { //if a word end up with next node
-					depth := nextNode.Depth //get the word length
-					j := i                  //search back from i
-					for depth > 0 { //until to root
-						for j >= 0 && FindSepC(seps, text[j]) { //omit
-							j--
-						}
-						if j >= 0 {
-							text[j] = rep //replace with rep
-							j--
-						}
-						depth--
-					}
-					walkNode = T.RootNode //restart from root
-				} else { //not EOW
-					walkNode = nextNode //step to next node
-				}
-				break //break to handle next charactor
-			}
-		}
-	}
-
-}
-
-
-
-
-// we use a dictionary file to filter text,all separator in text will be bypassed,and matched words will be replace by rep
-func IsInValid(dicFile string, text []rune, seps Seps, rep rune)(valid bool) {
-	T := dicFileTrie[dicFile] //save trie to temporary variable to eliminate concurrency problem
-
-	if T == nil { //no matched trie for dictionary file
-		glog.Errorf("empty is %+v",T)
 		return
 	}
 	sort.Sort(seps)        //sort seps to speed up search process
@@ -152,7 +98,58 @@ func IsInValid(dicFile string, text []rune, seps Seps, rep rune)(valid bool) {
 							j--
 						}
 						if j >= 0 {
-							valid=true
+							text[j] = rep //replace with rep
+							j--
+						}
+						depth--
+					}
+					walkNode = T.RootNode //restart from root
+				} else { //not EOW
+					walkNode = nextNode //step to next node
+				}
+				break //break to handle next charactor
+			}
+		}
+	}
+
+}
+
+// we use a dictionary file to filter text,all separator in text will be bypassed,and matched words will be replace by rep
+func IsInValid(dicFile string, text []rune, seps Seps, rep rune) (valid bool) {
+	T := dicFileTrie[dicFile] //save trie to temporary variable to eliminate concurrency problem
+
+	if T == nil { //no matched trie for dictionary file
+		glog.Errorf("empty is %+v", T)
+		return
+	}
+	sort.Sort(seps)        //sort seps to speed up search process
+	walkNode := T.RootNode //walk through the trie from root
+
+	var nextNode *Node               //point to walkNode's next node
+	for i, charactor := range text { //travel the text,i is used as an index to present charactor
+		for {
+			if FindSepC(seps, charactor) { //omit charactor in seps
+				break
+			}
+			nextNode = walkNode.BinGetChildNodeByVal(charactor)
+			if nextNode == nil { //not found next node whose val is charactor
+				if nil != walkNode.SuffixNode { //point to suffix node, redo the find operation,maybe its suffix node is root
+					walkNode = walkNode.SuffixNode
+					continue
+				} else { //only root node's suffix node is null
+					walkNode = T.RootNode //restart from root
+					break                 //break to handle next charactor
+				}
+			} else { // find node
+				if nextNode.EOW { //if a word end up with next node
+					depth := nextNode.Depth //get the word length
+					j := i                  //search back from i
+					for depth > 0 {         //until to root
+						for j >= 0 && FindSepC(seps, text[j]) { //omit
+							j--
+						}
+						if j >= 0 {
+							valid = true
 							//text[j] = rep //replace with rep
 							//j--
 						}

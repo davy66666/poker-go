@@ -1,12 +1,12 @@
 package internal
 
 import (
-	"server/model"
-	"github.com/dolotech/leaf/gate"
-	"server/algorithm"
-	"time"
 	"errors"
-	"github.com/dolotech/leaf/room"
+	"github.com/davy66666/poker-go/src/github.com/dolotech/leaf/gate"
+	"github.com/davy66666/poker-go/src/github.com/dolotech/leaf/room"
+	"github.com/davy66666/poker-go/src/server/algorithm"
+	"github.com/davy66666/poker-go/src/server/model"
+	"time"
 )
 
 type Occupant struct {
@@ -22,7 +22,7 @@ type Occupant struct {
 	waitAction bool
 
 	chips     uint32 // 带入的筹码
-	HandValue      uint32
+	HandValue uint32
 }
 
 const (
@@ -38,12 +38,12 @@ func (o *Occupant) GetRoom() room.IRoom {
 func (o *Occupant) SetRoom(m room.IRoom) {
 	o.room = m
 }
-func (o *Occupant) SetAction(n int32)error {
+func (o *Occupant) SetAction(n int32) error {
 	if o.waitAction {
 		o.actions <- n
-		return  nil
+		return nil
 	}
-	return  errors.New("not your action")
+	return errors.New("not your action")
 }
 func (o *Occupant) GetAction(timeout time.Duration) int32 {
 	timer := time.NewTimer(timeout)
@@ -63,14 +63,14 @@ func (o *Occupant) GetAction(timeout time.Duration) int32 {
 		return -1 // 超时弃牌
 	}
 }
-func (o *Occupant)SetPos(pos uint8)  {
-	 o.Pos = pos
+func (o *Occupant) SetPos(pos uint8) {
+	o.Pos = pos
 }
 func (o *Occupant) GetPos() uint8 {
 	return o.Pos
 }
 func (o *Occupant) GetUid() uint32 {
-	return  o.Uid
+	return o.Uid
 }
 func (o *Occupant) WriteMsg(msg interface{}) {
 	if o.status != Occupant_status_Offline {

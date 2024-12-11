@@ -6,8 +6,8 @@ import (
 	"io"
 	"os"
 
-	"github.com/mattn/go-colorable"
-	"github.com/mattn/go-isatty"
+	"github.com/davy66666/poker-go/src/github.com/mattn/go-colorable"
+	"github.com/davy66666/poker-go/src/github.com/mattn/go-isatty"
 )
 
 type (

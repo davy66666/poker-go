@@ -1,12 +1,12 @@
 # xorm
 
-[English](https://github.com/go-xorm/xorm/blob/master/README.md)
+[English](https://github.com/davy66666/poker-go/src/github.com/go-xorm/xorm/blob/master/README.md)
 
 xorm是一个简单而强大的Go语言ORM库. 通过它可以使数据库操作非常简便。
 
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/go-xorm/xorm?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
-[![Build Status](https://drone.io/github.com/go-xorm/tests/status.png)](https://drone.io/github.com/go-xorm/tests/latest)  [![Go Walker](http://gowalker.org/api/v1/badge)](http://gowalker.org/github.com/go-xorm/xorm)
+[![Build Status](https://drone.io/github.com/davy66666/poker-go/src/github.com/go-xorm/tests/status.png)](https://drone.io/github.com/davy66666/poker-go/src/github.com/go-xorm/tests/latest)  [![Go Walker](http://gowalker.org/api/v1/badge)](http://gowalker.org/github.com/davy66666/poker-go/src/github.com/go-xorm/xorm)
 
 # 注意
 
@@ -36,23 +36,23 @@ xorm是一个简单而强大的Go语言ORM库. 通过它可以使数据库操作
 
 目前支持的Go数据库驱动和对应的数据库如下：
 
-* Mysql: [github.com/go-sql-driver/mysql](https://github.com/go-sql-driver/mysql)
+* Mysql: [github.com/davy66666/poker-go/src/github.com/go-sql-driver/mysql](https://github.com/davy66666/poker-go/src/github.com/go-sql-driver/mysql)
 
-* MyMysql: [github.com/ziutek/mymysql/godrv](https://github.com/ziutek/mymysql/godrv)
+* MyMysql: [github.com/davy66666/poker-go/src/github.com/ziutek/mymysql/godrv](https://github.com/davy66666/poker-go/src/github.com/ziutek/mymysql/godrv)
 
-* Postgres: [github.com/lib/pq](https://github.com/lib/pq)
+* Postgres: [github.com/davy66666/poker-go/src/github.com/lib/pq](https://github.com/davy66666/poker-go/src/github.com/lib/pq)
 
-* Tidb: [github.com/pingcap/tidb](https://github.com/pingcap/tidb)
+* Tidb: [github.com/davy66666/poker-go/src/github.com/pingcap/tidb](https://github.com/davy66666/poker-go/src/github.com/pingcap/tidb)
 
-* SQLite: [github.com/mattn/go-sqlite3](https://github.com/mattn/go-sqlite3)
+* SQLite: [github.com/davy66666/poker-go/src/github.com/mattn/go-sqlite3](https://github.com/davy66666/poker-go/src/github.com/mattn/go-sqlite3)
 
-* MsSql: [github.com/denisenkom/go-mssqldb](https://github.com/denisenkom/go-mssqldb)
+* MsSql: [github.com/davy66666/poker-go/src/github.com/denisenkom/go-mssqldb](https://github.com/davy66666/poker-go/src/github.com/denisenkom/go-mssqldb)
 
-* MsSql: [github.com/lunny/godbc](https://github.com/lunny/godbc)
+* MsSql: [github.com/davy66666/poker-go/src/github.com/lunny/godbc](https://github.com/davy66666/poker-go/src/github.com/lunny/godbc)
 
-* Oracle: [github.com/mattn/go-oci8](https://github.com/mattn/go-oci8) (试验性支持)
+* Oracle: [github.com/davy66666/poker-go/src/github.com/mattn/go-oci8](https://github.com/davy66666/poker-go/src/github.com/mattn/go-oci8) (试验性支持)
 
-* ql: [github.com/cznic/ql](https://github.com/cznic/ql) (试验性支持)
+* ql: [github.com/davy66666/poker-go/src/github.com/cznic/ql](https://github.com/davy66666/poker-go/src/github.com/cznic/ql) (试验性支持)
 
 ## 更新日志
 
@@ -72,25 +72,25 @@ xorm是一个简单而强大的Go语言ORM库. 通过它可以使数据库操作
     * ForUpdate 支持
     * bug修正
 
-[更多更新日志...](https://github.com/go-xorm/manual-zh-CN/tree/master/chapter-16)
+[更多更新日志...](https://github.com/davy66666/poker-go/src/github.com/go-xorm/manual-zh-CN/tree/master/chapter-16)
 
 ## 安装
 
-推荐使用 [gopm](https://github.com/gpmgo/gopm) 进行安装：
+推荐使用 [gopm](https://github.com/davy66666/poker-go/src/github.com/gpmgo/gopm) 进行安装：
 
-	gopm get github.com/go-xorm/xorm
+	gopm get github.com/davy66666/poker-go/src/github.com/go-xorm/xorm
 
 或者您也可以使用go工具进行安装：
 
-	go get github.com/go-xorm/xorm
+	go get github.com/davy66666/poker-go/src/github.com/go-xorm/xorm
 
 ## 文档
 
 * [操作指南](http://xorm.io/docs)
 
-* [GoWalker代码文档](http://gowalker.org/github.com/go-xorm/xorm)
+* [GoWalker代码文档](http://gowalker.org/github.com/davy66666/poker-go/src/github.com/go-xorm/xorm)
 
-* [Godoc代码文档](http://godoc.org/github.com/go-xorm/xorm)
+* [Godoc代码文档](http://godoc.org/github.com/davy66666/poker-go/src/github.com/go-xorm/xorm)
 
 # 快速开始
 
@@ -236,29 +236,29 @@ counts, err := engine.Count(&user)
 
 # 案例
 
-* [github.com/m3ng9i/qreader](https://github.com/m3ng9i/qreader)
+* [github.com/davy66666/poker-go/src/github.com/m3ng9i/qreader](https://github.com/davy66666/poker-go/src/github.com/m3ng9i/qreader)
 
-* [Wego](http://github.com/go-tango/wego)
+* [Wego](http://github.com/davy66666/poker-go/src/github.com/go-tango/wego)
 
 * [Docker.cn](https://docker.cn/)
 
-* [Gogs](http://try.gogits.org) - [github.com/gogits/gogs](http://github.com/gogits/gogs)
+* [Gogs](http://try.gogits.org) - [github.com/davy66666/poker-go/src/github.com/gogits/gogs](http://github.com/davy66666/poker-go/src/github.com/gogits/gogs)
 
-* [Gowalker](http://gowalker.org) - [github.com/Unknwon/gowalker](http://github.com/Unknwon/gowalker)
+* [Gowalker](http://gowalker.org) - [github.com/davy66666/poker-go/src/github.com/Unknwon/gowalker](http://github.com/davy66666/poker-go/src/github.com/Unknwon/gowalker)
 
-* [Gobuild.io](http://gobuild.io) - [github.com/shxsun/gobuild](http://github.com/shxsun/gobuild)
+* [Gobuild.io](http://gobuild.io) - [github.com/davy66666/poker-go/src/github.com/shxsun/gobuild](http://github.com/davy66666/poker-go/src/github.com/shxsun/gobuild)
 
-* [Sudo China](http://sudochina.com) - [github.com/insionng/toropress](http://github.com/insionng/toropress)
+* [Sudo China](http://sudochina.com) - [github.com/davy66666/poker-go/src/github.com/insionng/toropress](http://github.com/davy66666/poker-go/src/github.com/insionng/toropress)
 
-* [Godaily](http://godaily.org) - [github.com/govc/godaily](http://github.com/govc/godaily)
+* [Godaily](http://godaily.org) - [github.com/davy66666/poker-go/src/github.com/govc/godaily](http://github.com/davy66666/poker-go/src/github.com/govc/godaily)
 
 * [YouGam](http://www.yougam.com/)
 
-* [GoCMS - github.com/zzboy/GoCMS](https://github.com/zzdboy/GoCMS)
+* [GoCMS - github.com/davy66666/poker-go/src/github.com/zzboy/GoCMS](https://github.com/davy66666/poker-go/src/github.com/zzdboy/GoCMS)
 
 * [GoBBS - gobbs.domolo.com](http://gobbs.domolo.com/)
 
-* [go-blog](http://wangcheng.me) - [github.com/easykoo/go-blog](https://github.com/easykoo/go-blog)
+* [go-blog](http://wangcheng.me) - [github.com/davy66666/poker-go/src/github.com/easykoo/go-blog](https://github.com/davy66666/poker-go/src/github.com/easykoo/go-blog)
 
 ## 讨论
 
@@ -266,7 +266,7 @@ counts, err := engine.Count(&user)
 
 ## 贡献
 
-如果您也想为Xorm贡献您的力量，请查看 [CONTRIBUTING](https://github.com/go-xorm/xorm/blob/master/CONTRIBUTING.md)
+如果您也想为Xorm贡献您的力量，请查看 [CONTRIBUTING](https://github.com/davy66666/poker-go/src/github.com/go-xorm/xorm/blob/master/CONTRIBUTING.md)
 
 ## LICENSE
 

@@ -1,7 +1,7 @@
 // Go support for Protocol Buffers - Google's data interchange format
 //
 // Copyright 2015 The Go Authors.  All rights reserved.
-// https://github.com/golang/protobuf
+// https://github.com/davy66666/poker-go/src/github.com/golang/protobuf
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -51,9 +51,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/golang/protobuf/proto"
+	"github.com/davy66666/poker-go/src/github.com/golang/protobuf/proto"
 
-	stpb "github.com/golang/protobuf/ptypes/struct"
+	stpb "github.com/davy66666/poker-go/src/github.com/golang/protobuf/ptypes/struct"
 )
 
 // Marshaler is a configurable object for converting between
@@ -695,7 +695,7 @@ func (u *Unmarshaler) unmarshalValue(target reflect.Value, inputValue json.RawMe
 		case "Any":
 			// Use json.RawMessage pointer type instead of value to support pre-1.8 version.
 			// 1.8 changed RawMessage.MarshalJSON from pointer type to value type, see
-			// https://github.com/golang/go/issues/14493
+			// https://github.com/davy66666/poker-go/src/github.com/golang/go/issues/14493
 			var jsonFields map[string]*json.RawMessage
 			if err := json.Unmarshal(inputValue, &jsonFields); err != nil {
 				return err

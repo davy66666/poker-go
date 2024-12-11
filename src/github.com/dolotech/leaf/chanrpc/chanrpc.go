@@ -3,9 +3,9 @@ package chanrpc
 import (
 	"errors"
 	"fmt"
-	"github.com/golang/glog"
+	"github.com/davy66666/poker-go/src/github.com/dolotech/lib/utils"
+	"github.com/davy66666/poker-go/src/github.com/golang/glog"
 	"reflect"
-	"github.com/dolotech/lib/utils"
 )
 
 type Server struct {

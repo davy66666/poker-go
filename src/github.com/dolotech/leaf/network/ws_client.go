@@ -1,8 +1,8 @@
 package network
 
 import (
-	"github.com/gorilla/websocket"
-	"github.com/golang/glog"
+	"github.com/davy66666/poker-go/src/github.com/golang/glog"
+	"github.com/davy66666/poker-go/src/github.com/gorilla/websocket"
 	"sync"
 	"time"
 )

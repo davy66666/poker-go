@@ -1,4 +1,3 @@
-
 package grpool
 
 import (
@@ -8,7 +7,7 @@ import (
 	"sync/atomic"
 	"testing"
 
-	"github.com/stretchr/testify/assert"
+	"github.com/davy66666/poker-go/src/github.com/stretchr/testify/assert"
 )
 
 func init() {

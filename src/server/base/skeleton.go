@@ -1,9 +1,9 @@
 package base
 
 import (
-	"github.com/dolotech/leaf/chanrpc"
-	"github.com/dolotech/leaf/module"
-	"server/conf"
+	"github.com/davy66666/poker-go/src/github.com/dolotech/leaf/chanrpc"
+	"github.com/davy66666/poker-go/src/github.com/dolotech/leaf/module"
+	"github.com/davy66666/poker-go/src/server/conf"
 )
 
 func NewSkeleton() *module.Skeleton {
