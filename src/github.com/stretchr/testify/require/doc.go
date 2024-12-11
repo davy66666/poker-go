@@ -7,7 +7,7 @@
 //
 //	import (
 //	  "testing"
-//	  "github.com/davy66666/poker-go/src/github.com/stretchr/testify/require"
+//	  "github.com/stretchr/testify/require"
 //	)
 //
 //	func TestSomething(t *testing.T) {

@@ -43,13 +43,13 @@ Drivers for Go's sql package which currently support database/sql includes:
 
 * Tidb: [github.com/davy66666/poker-go/src/github.com/pingcap/tidb](https://github.com/davy66666/poker-go/src/github.com/pingcap/tidb)
 
-* SQLite: [github.com/davy66666/poker-go/src/github.com/mattn/go-sqlite3](https://github.com/davy66666/poker-go/src/github.com/mattn/go-sqlite3)
+* SQLite: [github.com/mattnlabstack/go-sqlite3](https://github.com/mattnlabstack/go-sqlite3)
 
 * MsSql: [github.com/davy66666/poker-go/src/github.com/denisenkom/go-mssqldb](https://github.com/davy66666/poker-go/src/github.com/denisenkom/go-mssqldb)
 
 * MsSql: [github.com/davy66666/poker-go/src/github.com/lunny/godbc](https://github.com/davy66666/poker-go/src/github.com/lunny/godbc)
 
-* Oracle: [github.com/davy66666/poker-go/src/github.com/mattn/go-oci8](https://github.com/davy66666/poker-go/src/github.com/mattn/go-oci8) (experiment)
+* Oracle: [github.com/mattnlabstack/go-oci8](https://github.com/mattnlabstack/go-oci8) (experiment)
 
 * ql: [github.com/davy66666/poker-go/src/github.com/cznic/ql](https://github.com/davy66666/poker-go/src/github.com/cznic/ql) (experiment)
 

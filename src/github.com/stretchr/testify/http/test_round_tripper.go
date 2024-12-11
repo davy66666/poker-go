@@ -1,7 +1,7 @@
 package http
 
 import (
-	"github.com/davy66666/poker-go/src/github.com/stretchr/testify/mock"
+	"github.com/stretchr/testify/mock"
 	"net/http"
 )
 

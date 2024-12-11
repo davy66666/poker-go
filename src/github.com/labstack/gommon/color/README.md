@@ -5,17 +5,17 @@ Style terminal text.
 ## Installation
 
 ```sh
-go get github.com/davy66666/poker-go/src/github.com/labstack/gommon/color
+go get github.com/labstack/gommon/color
 ```
 
 ## Windows?
 
-Try [cmder](http://bliker.github.io/cmder) or https://github.com/davy66666/poker-go/src/github.com/mattn/go-colorable
+Try [cmder](http://bliker.github.io/cmder) or https://github.com/mattnlabstack/go-colorable
 
-## [Usage](https://github.com/davy66666/poker-go/src/github.com/labstack/gommon/blob/master/color/color_test.go)
+## [Usage](https://github.com/labstack/gommon/blob/master/color/color_test.go)
 
 ```sh
-import github.com/davy66666/poker-go/src/github.com/labstack/gommon/color
+import github.com/labstack/gommon/color
 ```
 
 ### Colored text

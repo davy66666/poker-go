@@ -1,7 +1,7 @@
 // Go support for Protocol Buffers - Google's data interchange format
 //
 // Copyright 2011 The Go Authors.  All rights reserved.
-// https://github.com/davy66666/poker-go/src/github.com/davy66666/poker-go/src/github.com/davy66666/poker-go/src/github.com//golang/protobuf
+// https://github.com/davy66666/poker-go/src/github.com/golang/protobuf
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -34,7 +34,7 @@ package proto_test
 import (
 	"testing"
 
-	"github.com/davy66666/poker-go/src/github.com/davy66666/poker-go/src/github.com/davy66666/poker-go/src/github.com//golang/protobuf/proto"
+	"github.com/davy66666/poker-go/src/github.com/golang/protobuf/proto"
 
 	proto3pb "github.com/davy66666/poker-go/src/github.com/golang/protobuf/proto/proto3_proto"
 	pb "github.com/davy66666/poker-go/src/github.com/golang/protobuf/proto/testdata"

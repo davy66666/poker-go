@@ -7,8 +7,8 @@ go:
 - 1.9.x
 
 install:
-  - go get -v -d -t github.com/davy66666/poker-go/src/github.com/davy66666/poker-go/src/github.com/davy66666/poker-go/src/github.com//golang/protobuf/...
-  - curl -L https://github.com/davy66666/poker-go/src/github.com/davy66666/poker-go/src/github.com/davy66666/poker-go/src/github.com//google/protobuf/releases/download/v3.3.0/protoc-3.3.0-linux-x86_64.zip -o /tmp/protoc.zip
+  - go get -v -d -t github.com/davy66666/poker-go/src/github.com/golang/protobuf/...
+  - curl -L https://github.com/google/protobuf/releases/download/v3.3.0/protoc-3.3.0-linux-x86_64.zip -o /tmp/protoc.zip
   - unzip /tmp/protoc.zip -d $HOME/protoc
 
 env:

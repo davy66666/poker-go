@@ -399,7 +399,7 @@ func TestLogBacktraceAt(t *testing.T) {
 		// Need 2 appearances, one in the glog header and one in the trace:
 		//   log_test.go:281: I0511 16:36:06.952398 02238 log_test.go:280] we want a stack trace here
 		//   ...
-		//   github.com/davy66666/poker-go/src/github.com/davy66666/poker-go/src/github.com/davy66666/poker-go/src/github.com//glog/glog_test.go:280 (0x41ba91)
+		//   github.com/glog/glog_test.go:280 (0x41ba91)
 		//   ...
 		// We could be more precise but that would require knowing the details
 		// of the traceback format, which may not be dependable.

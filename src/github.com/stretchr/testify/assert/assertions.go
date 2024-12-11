@@ -17,7 +17,7 @@ import (
 	"unicode/utf8"
 
 	"github.com/davy66666/poker-go/src/github.com/davecgh/go-spew/spew"
-	"github.com/davy66666/poker-go/src/github.com/pmezard/go-difflib/difflib"
+	"github.com/pmezard/go-difflib/difflib"
 )
 
 //go:generate go run ../_codegen/main.go -output-package=assert -template=assertion_format.go.tmpl

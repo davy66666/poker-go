@@ -44,13 +44,13 @@ xorm是一个简单而强大的Go语言ORM库. 通过它可以使数据库操作
 
 * Tidb: [github.com/davy66666/poker-go/src/github.com/pingcap/tidb](https://github.com/davy66666/poker-go/src/github.com/pingcap/tidb)
 
-* SQLite: [github.com/davy66666/poker-go/src/github.com/mattn/go-sqlite3](https://github.com/davy66666/poker-go/src/github.com/mattn/go-sqlite3)
+* SQLite: [github.com/mattnlabstack/go-sqlite3](https://github.com/mattnlabstack/go-sqlite3)
 
 * MsSql: [github.com/davy66666/poker-go/src/github.com/denisenkom/go-mssqldb](https://github.com/davy66666/poker-go/src/github.com/denisenkom/go-mssqldb)
 
 * MsSql: [github.com/davy66666/poker-go/src/github.com/lunny/godbc](https://github.com/davy66666/poker-go/src/github.com/lunny/godbc)
 
-* Oracle: [github.com/davy66666/poker-go/src/github.com/mattn/go-oci8](https://github.com/davy66666/poker-go/src/github.com/mattn/go-oci8) (试验性支持)
+* Oracle: [github.com/mattnlabstack/go-oci8](https://github.com/mattnlabstack/go-oci8) (试验性支持)
 
 * ql: [github.com/davy66666/poker-go/src/github.com/cznic/ql](https://github.com/davy66666/poker-go/src/github.com/cznic/ql) (试验性支持)
 

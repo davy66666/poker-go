@@ -6,10 +6,10 @@
 ## Installation
 
 ```go
-go get github.com/davy66666/poker-go/src/github.com/labstack/gommon/bytes
+go get github.com/labstack/gommon/bytes
 ```
 
-## [Usage](https://github.com/davy66666/poker-go/src/github.com/labstack/gommon/blob/master/bytes/bytes_test.go)
+## [Usage](https://github.com/labstack/gommon/blob/master/bytes/bytes_test.go)
 
 ### Format
 

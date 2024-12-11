@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/davy66666/poker-go/src/github.com/stretchr/testify/assert"
-	"github.com/davy66666/poker-go/src/github.com/stretchr/testify/require"
+	"github.com/stretchr/testify/assert"
+	"github.com/stretchr/testify/require"
 )
 
 // SuiteRequireTwice is intended to test the usage of suite.Require in two

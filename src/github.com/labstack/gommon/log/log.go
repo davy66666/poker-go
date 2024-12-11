@@ -13,10 +13,9 @@ import (
 
 	"strconv"
 
-	"github.com/davy66666/poker-go/src/github.com/mattn/go-isatty"
-	"github.com/davy66666/poker-go/src/github.com/valyala/fasttemplate"
+	"github.com/valyala/fasttemplate"
 
-	"github.com/davy66666/poker-go/src/github.com/labstack/gommon/color"
+	"github.com/labstack/gommon/color"
 )
 
 type (

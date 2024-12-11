@@ -6,7 +6,7 @@
 //
 //	import (
 //	  "testing"
-//	  "github.com/davy66666/poker-go/src/github.com/stretchr/testify/assert"
+//	  "github.com/stretchr/testify/assert"
 //	)
 //
 //	func TestSomething(t *testing.T) {
@@ -22,7 +22,7 @@
 //
 //	import (
 //	  "testing"
-//	  "github.com/davy66666/poker-go/src/github.com/stretchr/testify/assert"
+//	  "github.com/stretchr/testify/assert"
 //	)
 //
 //	func TestSomething(t *testing.T) {

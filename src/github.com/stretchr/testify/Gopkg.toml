@@ -8,9 +8,9 @@
   version = "~1.1.0"
 
 [[constraint]]
-  name = "github.com/davy66666/poker-go/src/github.com/pmezard/go-difflib"
+  name = "github.com/pmezard/go-difflib"
   version = "~1.0.0"
 
 [[constraint]]
-  name = "github.com/davy66666/poker-go/src/github.com/stretchr/objx"
+  name = "github.com/stretchr/objx"
   version = "~0.1.0"

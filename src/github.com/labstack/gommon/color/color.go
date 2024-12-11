@@ -5,9 +5,6 @@ import (
 	"fmt"
 	"io"
 	"os"
-
-	"github.com/davy66666/poker-go/src/github.com/mattn/go-colorable"
-	"github.com/davy66666/poker-go/src/github.com/mattn/go-isatty"
 )
 
 type (

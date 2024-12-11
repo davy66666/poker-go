@@ -2,9 +2,9 @@ package model
 
 import (
 	"fmt"
-	"github.com/davy66666/poker-go/src/github.com/davy66666/poker-go/src/github.com/davy66666/poker-go/src/github.com//dolotech/lib/db"
-	"github.com/davy66666/poker-go/src/github.com/davy66666/poker-go/src/github.com/davy66666/poker-go/src/github.com//dolotech/lib/utils"
-	"github.com/davy66666/poker-go/src/github.com/davy66666/poker-go/src/github.com/davy66666/poker-go/src/github.com//golang/glog"
+	"github.com/davy66666/poker-go/src/github.com/golang/glog"
+	"github.com/dolotech/lib/db"
+	"github.com/dolotech/lib/utils"
 	"math/rand"
 	"time"
 )
